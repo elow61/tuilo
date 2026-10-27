@@ -1,8 +1,11 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
+  --bg: #0f1115;
+  --bg-header: #14171d;
+  --bg-container: #171A21;
+  --border: #262B35;
+  --border-fields: #3A4150;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
@@ -38,6 +41,7 @@ body {
 header {
   padding: 10px;
   display: flex;
+  background-color: var(--bg-container);
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
 }
@@ -57,6 +61,61 @@ nav ul li {
   margin: 0 20px 0 0;
 }
 
+/* MAIN */
 main {
-  background-color: #b6c7ff;
+  margin: 20px;
+  display: flex;
+  background-color: var(--bg);
+}
+
+div.first-group {
+  max-width: max-content;
+}
+div.second-group {
+  max-width: max-content;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--bg-container);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  padding: 8px;
+  background-color: var(--bg-header);
+  border: 1px solid var(--border-fields);
+  border-radius: 10px;
+}
+
+.iconStore {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 10px;
+}
+
+.iconCard {
+  border: 1px solid var(--border-fields);
+  border-radius: 10px;
+  max-width: 130px;
+  max-height: 130px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconCard p {
+  font-size: .8em;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

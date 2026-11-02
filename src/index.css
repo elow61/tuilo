@@ -68,11 +68,14 @@ main {
   background-color: var(--bg);
 }
 
-div.first-group {
-  max-width: max-content;
+.first-group {
+  flex: 0 1 460px;
+  min-width: 0;
 }
-div.second-group {
-  max-width: max-content;
+
+.second-group {
+  flex: 1 1 320px;
+  min-width: 0;
 }
 
 section {
@@ -84,17 +87,19 @@ section {
 }
 
 input {
-  width: 300px;
+  width: 100%;
   height: 30px;
   padding: 8px;
+  box-sizing: border-box;
   background-color: var(--bg-header);
   border: 1px solid var(--border-fields);
   border-radius: 10px;
 }
 
+/* PICTO SECTION */
 .iconStore {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   padding: 10px;
 }
@@ -108,6 +113,10 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+}
+.iconCard.selected {
+  border: 1px solid white;
 }
 
 .iconCard p {
@@ -118,4 +127,39 @@ input {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* PREVIEW SECTION */
+.previewContainer {
+  display: flex;
+}
+.previewCanvas {
+  --dot: rgba(255, 255, 255, 0.12);
+
+  margin-right: 30px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background-color: var(--bg-header);
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.previewTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 22%;
+  background-color: var(--bg-container);
+  border: 1px solid var(--border);
+}
+
+.previewTile svg {
+  width: 55%;
+  height: 55%;
 }

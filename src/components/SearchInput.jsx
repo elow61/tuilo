@@ -6,7 +6,7 @@ export default function SearchInput({ onValueChange }) {
         type="text"
         placeholder="calendar"
         id="search"
-        onChange={(e) => onValueChange(e)}/>
+        onChange={(e) => onValueChange(e.target.value)}/>
     </>
   )
 }

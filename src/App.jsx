@@ -5,14 +5,20 @@ import SearchInput from "./components/SearchInput.jsx";
 import {useEffect, useMemo, useState} from "react";
 import Section from "./components/Section.jsx";
 import IconStore from "./components/IconStore.jsx";
+import Preview from "./components/Preview.jsx";
 
 function App() {
-  const [icons, setIcons] = useState({});
   const [search, setSearch] = useState('');
 
   const filteredIconNames = useMemo(
     () => {
       const names = Object.keys(ph.icons);
+
+      if (!search) {
+        const suggestions = ['chart', 'cube', 'calendar', 'chat', 'folder', 'clock', 'globe', 'gear']
+        return names.filter(name => suggestions.some((s) => name.includes(s + '-duotone')))
+      }
+
       return names.filter(name => {
         const matchesDuotone = name.toLowerCase().endsWith('-duotone');
         const matchesSearch = name.toLowerCase().includes(search.toLowerCase());
@@ -42,9 +48,14 @@ function App() {
             <Section title="2 • Picto">
               <IconStore iconNames={filteredIconNames}/>
             </Section>
+            <Section title="3 • Colors">
+
+            </Section>
           </div>
           <div className="second-group">
-            <Section title="Preview"/>
+            <Section title="">
+              <Preview title="Preview"/>
+            </Section>
           </div>
         </main>
       </>

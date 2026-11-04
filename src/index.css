@@ -1,16 +1,16 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #E8EAED;
+  --text-h: #9AA3B2;
+  --label-card: #C9CED8;
+  --primaryColor: #08060d;
+  --secondaryColor: #08060d;
+  --bg-fake-app: transparent;
+  --size: 70%;
   --bg: #0f1115;
   --bg-header: #14171d;
   --bg-container: #171A21;
   --border: #262B35;
   --border-fields: #3A4150;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
@@ -53,6 +53,10 @@ header {
 h1 {
   padding: 0 10px 0 10px;
 }
+h4 {
+  margin-top: 5px;
+  color: var(--text-h);
+}
 nav ul {
   display: flex;
   list-style: none;
@@ -79,8 +83,8 @@ main {
 }
 
 section {
-  margin: 20px;
-  padding: 20px;
+  margin: 15px;
+  padding: 15px;
   background-color: var(--bg-container);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -103,7 +107,6 @@ input {
   gap: 16px;
   padding: 10px;
 }
-
 .iconCard {
   border: 1px solid var(--border-fields);
   border-radius: 10px;
@@ -118,7 +121,6 @@ input {
 .iconCard.selected {
   border: 1px solid white;
 }
-
 .iconCard p {
   font-size: .8em;
   text-align: center;
@@ -137,7 +139,7 @@ input {
   --dot: rgba(255, 255, 255, 0.12);
 
   margin-right: 30px;
-  width: 350px;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,19 +149,173 @@ input {
   background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px);
   background-size: 16px 16px;
 }
-
 .previewTile {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: var(--size, 70%);
+  height: var(--size, auto);
   aspect-ratio: 1;
+  flex-shrink: 0;
   border-radius: 22%;
-  background-color: var(--bg-container);
+  background-color: #24272D;
   border: 1px solid var(--border);
 }
-
 .previewTile svg {
   width: 55%;
   height: 55%;
+}
+.previewDetails h2 {
+  margin-top: 5px;
+}
+
+.iconSize {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.iconSize .previewTile {
+  margin-right: 15px;
+}
+.iconSize p {
+  text-align: center;
+  margin-right: 10px;
+  font-size: .7em;
+}
+
+/* COLOR SECTION */
+.mainColors {
+  display: flex;
+  justify-content: space-evenly;
+}
+.tileColor {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid var(--border-fields);
+}
+.tileColor input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.mainColorTile {
+  display: flex;
+  border: 1px solid var(--border-fields);
+  background-color: var(--bg);
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+  width: 160px;
+}
+.mainColorTile p {
+  font-weight: bold;
+  margin: 0;
+}
+.mainColorTile span {
+  display: inline-block;
+  color: #3A4150;
+}
+.duoSwatch {
+  width: 44px;
+  margin-right: 10px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-fields);
+  background: linear-gradient(135deg, var(--primaryColor) 50%, var(--secondaryColor) 50%);
+  cursor: pointer;
+}
+.duoSwatch.selected {
+  border: 1px solid white;
+}
+
+/* SECTION IN CONTEXT */
+.headerMode {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonChangeMode button {
+  text-transform: capitalize;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 15px;
+  border: none;
+}
+.buttonChangeMode button[aria-pressed="true"] {
+  background-color: var(--label-card);
+  color: var(--primaryColor);
+}
+
+.background-home {
+  width: inherit;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home-bg-dark {
+  background:
+    radial-gradient(ellipse 25% 35% at 82% 48%, rgba(24, 20, 50, 0.6) 0%, transparent 100%),
+    linear-gradient(90deg, rgba(4, 6, 14, 0.25) 0%, transparent 10%, transparent 46%, rgba(9, 9, 24, 0.8) 70%, rgba(6, 8, 19, 0.97) 100%),
+    radial-gradient(ellipse 55% 65% at 34% -8%, rgba(32, 56, 72, 0.8) 0%, transparent 100%),
+    linear-gradient(180deg, #13212F 0%, #0B1420 28%, #060913 45%, #04060E 62%);
+}
+.home-bg-light {
+  background:
+    radial-gradient(ellipse 34% 50% at 46% 60%, rgba(238, 238, 246, 0.95) 0%, transparent 100%),
+    radial-gradient(ellipse 45% 40% at 95% 12%, rgba(206, 200, 228, 0.9) 0%, transparent 100%),
+    linear-gradient(180deg, #D8D6E5 0%, #E0DFE7 40%, #E0DFE7 100%);
+}
+.previewAppContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  row-gap: 30px;
+  padding: 40px 20px;
+}
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: .8em;
+  color: var(--text-h);
+}
+.appContainer.userApp {
+  font-weight: bold;
+  color: var(--text);
+  text-transform: capitalize;
+}
+.appTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  aspect-ratio: 1;
+  border-radius: 22%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.appTile svg {
+  width: 55%;
+  height: 55%;
+}
+.previewApp {
+  width: 45%;
+  aspect-ratio: 1;
+  border-radius: 22%;
+  background-color: var(--bg-fake-app);
+}
+.home-bg-light .appTile {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.home-bg-light .appContainer {
+  color: #4B5563;
+}
+.home-bg-light .appContainer.userApp {
+  color: #111827;
 }

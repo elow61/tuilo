@@ -3,7 +3,7 @@ import {useTuilo} from "../contexts/TuiloContext.jsx";
 
 export default function IconStore({iconNames}) {
 
-  const { selectedIcon, setSelectedIcon } = useTuilo()
+  const { setSelectedIcon } = useTuilo()
   return (
     <div className="iconStore">
       {

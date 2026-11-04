@@ -10,8 +10,8 @@ export default function ColorPalette() {
   return (
     <>
       <div className="mainColors">
-        <ColorPicker hexaColor={selectedColors.primary} levelTitle="Primary" />
-        <ColorPicker hexaColor={selectedColors.secondary} levelTitle="Secondary" />
+        <ColorPicker hexaColor={selectedColors.primary} level='primary' levelTitle="Primary" />
+        <ColorPicker hexaColor={selectedColors.secondary} level='secondary' levelTitle="Secondary" />
       </div>
       <div className="palletColor">
         <p>Suggested duos</p>

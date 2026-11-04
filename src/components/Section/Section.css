@@ -1,0 +1,7 @@
+.section {
+  margin: 15px;
+  padding: 15px;
+  background-color: var(--bg-container);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}

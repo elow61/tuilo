@@ -1,9 +1,8 @@
-import {createContext, useState, useContext, useMemo} from "react";
-import { defaultDuo } from "../data/duoColorPallets.jsx";
+import {useState, useMemo} from "react";
+import { defaultDuo } from "../data/duoPalettes.js";
 import ph from "@iconify-json/ph/icons.json";
 import recolor from "../lib/recolor.js";
-
-const TuiloContext = createContext(null)
+import TuiloContext from "./TuiloContext";
 
 export default function TuiloProvider({ children }) {
   const [selectedIcon, setSelectedIcon] = useState('');
@@ -27,10 +26,3 @@ export default function TuiloProvider({ children }) {
   </TuiloContext.Provider>;
 }
 
-export function useTuilo() {
-  const context = useContext(TuiloContext);
-  if (!context) {
-    throw new Error("TuiloContext is null");
-  }
-  return context;
-}

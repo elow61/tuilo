@@ -1,9 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import './components/filters/SearchInput.css'
 import App from './App.jsx'
-import TuiloProvider from "./contexts/TuiloContext.jsx";
+import TuiloProvider from "./contexts/TuiloProvider.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

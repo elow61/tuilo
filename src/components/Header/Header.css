@@ -1,0 +1,22 @@
+.app-header {
+  padding: 10px;
+  display: flex;
+  background-color: var(--bg-container);
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.app-header__title {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+.app-header__title h1 {
+  padding: 0 10px;
+}
+.app-header__nav ul {
+  display: flex;
+  list-style: none;
+}
+.app-header__nav li {
+  margin: 0 20px 0 0;
+}

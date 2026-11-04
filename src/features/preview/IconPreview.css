@@ -1,0 +1,50 @@
+.previewContainer {
+  display: flex;
+}
+.previewCanvas {
+  --dot: rgba(255, 255, 255, 0.12);
+
+  margin-right: 30px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background-color: var(--bg-header);
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+.previewTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size, 70%);
+  height: var(--size, auto);
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border-radius: 22%;
+  background-color: var(--bg-tile);
+  border: 1px solid var(--border);
+}
+.previewTile svg {
+  width: 55%;
+  height: 55%;
+}
+.previewDetails h2 {
+  margin-top: 5px;
+}
+
+.iconSize {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.iconSize .previewTile {
+  margin-right: 15px;
+}
+.iconSize p {
+  text-align: center;
+  margin-right: 10px;
+  font-size: .7em;
+}

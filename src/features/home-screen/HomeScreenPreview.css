@@ -1,0 +1,87 @@
+.headerMode {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ModeToggle */
+.buttonChangeMode button {
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  padding: 10px;
+  margin-left: 15px;
+  border: none;
+}
+.buttonChangeMode button[aria-pressed="true"] {
+  background-color: var(--label-card);
+  color: var(--primaryColor);
+}
+
+/* HomeScreen */
+.background-home {
+  width: inherit;
+  height: 350px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.home-bg-dark {
+  background:
+    radial-gradient(ellipse 25% 35% at 82% 48%, rgba(24, 20, 50, 0.6) 0%, transparent 100%),
+    linear-gradient(90deg, rgba(4, 6, 14, 0.25) 0%, transparent 10%, transparent 46%, rgba(9, 9, 24, 0.8) 70%, rgba(6, 8, 19, 0.97) 100%),
+    radial-gradient(ellipse 55% 65% at 34% -8%, rgba(32, 56, 72, 0.8) 0%, transparent 100%),
+    linear-gradient(180deg, #13212F 0%, #0B1420 28%, #060913 45%, #04060E 62%);
+}
+.home-bg-light {
+  background:
+    radial-gradient(ellipse 34% 50% at 46% 60%, rgba(238, 238, 246, 0.95) 0%, transparent 100%),
+    radial-gradient(ellipse 45% 40% at 95% 12%, rgba(206, 200, 228, 0.9) 0%, transparent 100%),
+    linear-gradient(180deg, #D8D6E5 0%, #E0DFE7 40%, #E0DFE7 100%);
+}
+.previewAppContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  row-gap: 30px;
+  padding: 40px 20px;
+}
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: .8em;
+  color: var(--text-h);
+}
+.appContainer.userApp {
+  font-weight: bold;
+  color: var(--text);
+  text-transform: capitalize;
+}
+.appTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  aspect-ratio: 1;
+  border-radius: 22%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.appTile svg {
+  width: 55%;
+  height: 55%;
+}
+.previewApp {
+  width: 45%;
+  aspect-ratio: 1;
+  border-radius: 22%;
+  background-color: var(--bg-fake-app);
+}
+.home-bg-light .appTile {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.home-bg-light .appContainer {
+  color: #4B5563;
+}
+.home-bg-light .appContainer.userApp {
+  color: #111827;
+}

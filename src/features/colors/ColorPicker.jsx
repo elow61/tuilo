@@ -1,9 +1,7 @@
-import {defaultDuo} from "../data/duoColorPallets.jsx";
-
-export default function PickupColor({hexaColor, levelTitle, onColorChange}) {
+export default function ColorPicker({ hexaColor, levelTitle, onColorChange }) {
   return (
     <label className="mainColorTile">
-      <div className="tileColor" style={{ backgroundColor: `${hexaColor}` }}>
+      <div className="tileColor" style={{ backgroundColor: hexaColor }}>
         <input
           type="color"
           value={hexaColor}

@@ -1,4 +1,4 @@
-export const fakeApp = [
+export const fakeApps = [
   { id: 2, name: 'Discuss', color: '#806427' },
   { id: 3, name: 'Calendar', color: '#196C6A' },
   { id: 4, name: 'Contacts', color: '#4E3F89' },

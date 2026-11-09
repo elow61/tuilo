@@ -1,16 +1,41 @@
-# React + Vite
+# Tuilo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tuilo** is a small web tool to build app icons for Odoo in a few clicks: pick a pictogram, choose two colors, check the result in context, and export it.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Search** among the duotone icons of the [Phosphor](https://phosphoricons.com) set
+- **Colors**: pick a primary and a secondary color, or start from one of the suggested duos
+- **Preview** the icon on its tile, at several sizes (96, 48 and 32 px)
+- **In context**: see your icon among other apps on a home screen, in dark or light mode
+- **Export** the result as **SVG** or **PNG**
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://react.dev) 19
+- [Vite](https://vite.dev)
+- [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com) for the tests
+- [Iconify](https://iconify.design) JSON package of the Phosphor icons
 
-## Expanding the ESLint configuration
+## Contributing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Contributions are welcome! Feel free to open an issue to report a bug or suggest an idea, or a pull request.
+
+Before submitting a pull request, please make sure the tests and the linter pass:
+
+```bash
+npm run test:run
+npm run lint
+```
+
+## Credits
+
+- Icons by [Phosphor Icons](https://phosphoricons.com), licensed under the [MIT License](https://github.com/phosphor-icons/core/blob/main/LICENSE).
+
+## Disclaimer
+
+Tuilo is an independent project and is not affiliated with or endorsed by Odoo S.A. "Odoo" is a trademark of Odoo S.A.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

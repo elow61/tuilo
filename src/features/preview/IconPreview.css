@@ -51,3 +51,21 @@
   margin-right: 10px;
   font-size: .7em;
 }
+
+/* Mobile: center the canvas, the title and the sizes */
+@media (max-width: 600px) {
+  .previewContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .previewDetails {
+    text-align: center;
+  }
+  .iconSize {
+    justify-content: center;
+  }
+  .iconSize .previewTile,
+  .iconSize p {
+    margin-right: 0;
+  }
+}

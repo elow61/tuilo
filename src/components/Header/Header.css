@@ -1,12 +1,15 @@
 .app-header {
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: var(--bg-container);
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
 }
 .app-header__title {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 20px;
 }
@@ -19,4 +22,22 @@
 }
 .app-header__nav li {
   margin: 0 20px 0 0;
+}
+
+@media (max-width: 600px) {
+  .app-header__title {
+    margin: 0;
+  }
+  .app-header__title h1 {
+    margin: 0;
+  }
+  .app-header__title h3 {
+    margin: 0;
+    font-size: .9em;
+    font-weight: normal;
+  }
+  .app-header__nav ul {
+    margin: 8px 0;
+    padding: 0;
+  }
 }

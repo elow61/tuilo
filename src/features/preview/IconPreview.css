@@ -1,11 +1,13 @@
 .previewContainer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .previewCanvas {
   --dot: rgba(255, 255, 255, 0.12);
 
-  margin-right: 30px;
   width: 250px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +39,7 @@
 
 .iconSize {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   gap: 24px;
 }

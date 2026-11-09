@@ -1,25 +1,25 @@
 .headerMode {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
+  column-gap: 15px;
 }
 
-/* ModeToggle */
+/* ButtonModeToggle */
+.buttonChangeMode {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
 .buttonChangeMode button {
   text-transform: capitalize;
-  border-radius: var(--radius);
-  padding: 10px;
-  margin-left: 15px;
-  border: none;
-}
-.buttonChangeMode button[aria-pressed="true"] {
-  background-color: var(--label-card);
-  color: var(--primaryColor);
 }
 
 /* HomeScreen */
 .background-home {
   width: inherit;
-  height: 350px;
+  min-height: 350px;
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -84,4 +84,14 @@
 }
 .home-bg-light .appContainer.userApp {
   color: #111827;
+}
+
+@media (max-width: 600px) {
+  .previewAppContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 24px 8px;
+  }
+  .appTile {
+    width: 56px;
+  }
 }

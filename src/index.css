@@ -55,6 +55,18 @@ h4 {
   color: var(--text-h);
 }
 
+/* Generic button */
+.btn {
+  border-radius: var(--radius);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn[aria-pressed="true"] {
+  background-color: var(--label-card);
+  color: var(--primaryColor);
+}
+
 main {
   margin: 20px;
   display: flex;
@@ -69,4 +81,36 @@ main {
 .second-group {
   flex: 1 1 320px;
   min-width: 0;
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.group > .section {
+  min-width: 0;
+}
+.group > .section:first-child {
+  flex: 3 1 480px;
+}
+.group > .section:last-child {
+  flex: 1 1 180px;
+}
+
+/* Tablet: stack the two columns */
+@media (max-width: 1100px) {
+  main {
+    flex-direction: column;
+  }
+  .first-group,
+  .second-group {
+    flex: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  main {
+    margin: 8px;
+  }
 }

@@ -4,7 +4,7 @@ export default function ButtonModeToggle({ value }) {
   const { mode, setMode } = useTuilo()
 
   return (
-    <button type="button" aria-pressed={mode === value} onClick={() => setMode(value)}>
+    <button type="button" className="btn" aria-pressed={mode === value} onClick={() => setMode(value)}>
       {value}
     </button>
   )

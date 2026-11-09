@@ -7,6 +7,7 @@ import IconStore from './features/icons/IconStore.jsx'
 import ColorPalette from './features/colors/ColorPalette.jsx'
 import IconPreview from './features/preview/IconPreview.jsx'
 import HomeScreenPreview from './features/home-screen/HomeScreenPreview.jsx'
+import Export from "./features/export/Export.jsx";
 
 function App() {
   const [search, setSearch] = useState('')
@@ -28,9 +29,14 @@ function App() {
           </Section>
         </div>
         <div className="second-group">
-          <Section>
-            <IconPreview title="Preview"/>
-          </Section>
+          <div className="group">
+            <Section>
+              <IconPreview title="Preview"/>
+            </Section>
+            <Section title="4 • Export">
+              <Export/>
+            </Section>
+          </div>
           <Section>
             <HomeScreenPreview title="In context • home screen"/>
           </Section>
